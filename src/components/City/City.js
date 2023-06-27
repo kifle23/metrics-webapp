@@ -1,15 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CityWrapper } from './City.styled';
+import { CityWrapper } from './City.styled.js';
 
-const City = () => (
- <CityWrapper>
-    City Component
- </CityWrapper>
-);
-
-City.propTypes = {};
-
-City.defaultProps = {};
+const City = () => <CityWrapper>City Component</CityWrapper>;
 
 export default City;

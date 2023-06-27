@@ -1,15 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { HeaderWrapper } from './Header.styled';
+import { HeaderWrapper } from './Header.styled.js';
 
-const Header = () => (
- <HeaderWrapper>
-    Header Component
- </HeaderWrapper>
-);
-
-Header.propTypes = {};
-
-Header.defaultProps = {};
+const Header = () => <HeaderWrapper>Header Component</HeaderWrapper>;
 
 export default Header;

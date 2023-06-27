@@ -1,15 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CountryWrapper } from './Country.styled';
+import { CountryWrapper } from './Country.styled.js';
 
-const Country = () => (
- <CountryWrapper>
-    Country Component
- </CountryWrapper>
-);
-
-Country.propTypes = {};
-
-Country.defaultProps = {};
+const Country = () => <CountryWrapper>Country Component</CountryWrapper>;
 
 export default Country;

@@ -12,14 +12,17 @@ const initialState = {
     wind: { speed: '' },
   },
 };
-
 const apiKey = '989c8157d1fdc9df18652ff14105abd1';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-
-export const fetchWeather = createAsyncThunk('weather/fetchWeather', async (cord) => {
-  const response = await axios.get(`${apiUrl}?lat=${cord.lat}&lon=${cord.long}&appid=${apiKey}`);
-  return response.data;
-});
+export const fetchWeather = createAsyncThunk(
+  'weather/fetchWeather',
+  async (cord) => {
+    const response = await axios.get(
+      `${apiUrl}?lat=${cord.lat}&lon=${cord.long}&appid=${apiKey}`,
+    );
+    return response.data;
+  },
+);
 
 const weatherSlice = createSlice({
   name: 'weather',
@@ -29,7 +32,9 @@ const weatherSlice = createSlice({
       state.cities = action.payload;
     },
     filterCountries: (state, action) => {
-      state.countries = initialState.countries.filter((country) => country.region === action.payload);
+      state.countries = initialState.countries.filter(
+        (country) => country.region === action.payload,
+      );
     },
     getWeather: (state, action) => {
       state.weather = action.payload;
@@ -48,6 +53,5 @@ const weatherSlice = createSlice({
       });
   },
 });
-
 export const { getCities, filterCountries, getWeather } = weatherSlice.actions;
 export default weatherSlice.reducer;

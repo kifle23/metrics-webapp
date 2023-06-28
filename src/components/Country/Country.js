@@ -8,7 +8,9 @@ import { getCities } from '../../redux/weatherSlice';
 const Country = ({
   name, number, vector, cities,
 }) => {
-  const mapStyle = { background: `url(${vector}) no-repeat center center/cover` };
+  const mapStyle = {
+    background: `url(${vector}) no-repeat center center/cover`,
+  };
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -31,7 +33,7 @@ Country.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   vector: PropTypes.string.isRequired,
-  cities: PropTypes.arrayOf(PropTypes.object).isRequired,
+  cities: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Country;

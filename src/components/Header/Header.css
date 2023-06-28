@@ -1,0 +1,55 @@
+header {
+    background-color: #ec4c8a;
+    color: #fff;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+header h3 {
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.previous {
+    background: url(../../assets/icons/previous.png) no-repeat center center/cover;
+    width: 10px;
+    height: 18px;
+    display: block;
+    filter: invert(1);
+}
+
+.mic {
+    background: url(../../assets/icons/microphone.png) no-repeat center center/cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: invert(1);
+}
+
+.settings {
+    background: url(../../assets/icons/setting.png) no-repeat center center/cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: invert(1);
+}
+
+i {
+    transition: all 0.2s ease-out;
+}
+
+i:active {
+    filter: invert(0.2);
+}
+
+.settings:hover {
+    transform: rotate(45deg);
+}

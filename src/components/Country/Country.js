@@ -2,21 +2,22 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './Country.css';
-import { getCities } from '../../redux/cities';
+import './Country.css';
+import { getCities } from '../../redux/weatherSlice';
 
-const Country = (props) => {
-  const {
-    name, number, vector, cities,
-  } = props;
-  const map = { background: `url(${vector}) no-repeat center center/cover` };
+const Country = ({ name, number, vector, cities }) => {
+  const mapStyle = { background: `url(${vector}) no-repeat center center/cover` };
   const dispatch = useDispatch();
 
+  const handleClick = () => {
+    dispatch(getCities(cities));
+  };
+
   return (
-    <Link to="/cities" onClick={() => dispatch(getCities(cities))} className={styles.wrapper}>
+    <Link to="/cities" onClick={handleClick} className="wrapper">
       <i className="right_arrow" />
-      <i style={map} className={styles.map} />
-      <div className={styles.info}>
+      <div className="map" style={mapStyle} />
+      <div className="info">
         <h3>{name}</h3>
         <span>{number}</span>
       </div>
@@ -24,11 +25,11 @@ const Country = (props) => {
   );
 };
 
-export default Country;
-
 Country.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   vector: PropTypes.string.isRequired,
-  cities: PropTypes.instanceOf(Array).isRequired,
+  cities: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
+
+export default Country;

@@ -1,77 +1,56 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import styles from './Heading.css';
-import { filterCountries } from '../../redux/countries';
+import './Heading.css';
+import { filterCountries } from '../../redux/weatherSlice';
 
-const Heading = (props) => {
+const Heading = ({ title, number, home }) => {
   const dispatch = useDispatch();
-  const { title, number, home } = props;
+
   const regions = [
-    {
-      name: 'Africa',
-      value: 'africa',
-    },
-    {
-      name: 'Asia',
-      value: 'asia',
-    },
-    {
-      name: 'Europe',
-      value: 'europe',
-    },
-    {
-      name: 'North America',
-      value: 'north-america',
-    },
-    {
-      name: 'Oceania',
-      value: 'oceania',
-    },
-    {
-      name: 'South America',
-      value: 'south-america',
-    },
+    { name: 'Africa', value: 'africa' },
+    { name: 'Asia', value: 'asia' },
+    { name: 'Europe', value: 'europe' },
+    { name: 'North America', value: 'north-america' },
+    { name: 'Oceania', value: 'oceania' },
+    { name: 'South America', value: 'south-america' },
   ];
 
+  const handleFilterChange = (event) => {
+    dispatch(filterCountries(event.target.value));
+  };
+
   return (
-    <div className={styles.heading}>
+    <div className="heading">
       <h1>{title}</h1>
-      {
-        (home) ? (
-          <select onChange={(e) => dispatch(filterCountries(e.target.value))} defaultValue="all" className={styles.filter}>
-            <option value="all" disabled>__Filter Countries by Region__</option>
-            {regions.map((region) => (
-              <option
-                key={region.value}
-                value={region.value}
-              >
-                {region.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <>
-            <span>{number}</span>
-          </>
-        )
-      }
+
+      {home ? (
+        <select className="filter" defaultValue="all" onChange={handleFilterChange}>
+          <option value="all" disabled>
+            __Filter Countries by Region__
+          </option>
+          {regions.map((region) => (
+            <option key={region.value} value={region.value}>
+              {region.name}
+            </option>
+          ))}
+        </select>
+      ) : (
+        <span>{number}</span>
+      )}
     </div>
   );
 };
 
-export default Heading;
-
 Heading.propTypes = {
   title: PropTypes.string.isRequired,
   home: PropTypes.bool,
-  number: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  number: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Heading.defaultProps = {
-  number: '',
   home: false,
+  number: '',
 };
+
+export default Heading;

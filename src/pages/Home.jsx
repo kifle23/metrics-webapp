@@ -5,7 +5,7 @@ import Country from '../components/Country/Country';
 import Heading from '../components/Heading/Heading';
 
 const Home = () => {
-  const countries = useSelector((state) => state.updateCountries);
+  const countries = useSelector((state) => state.data.countries);
 
   return (
     <>

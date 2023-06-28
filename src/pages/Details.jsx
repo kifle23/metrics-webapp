@@ -1,10 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux/es/exports';
+import { useSelector } from 'react-redux';
 import Header from '../components/Header/Header';
 import Heading from '../components/Heading/Heading';
 
 const Details = () => {
-  const weather = useSelector((state) => state.weather);
+  const weather = useSelector((state) => state.data.weather);
 
   return (
     <>

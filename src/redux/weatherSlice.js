@@ -18,12 +18,11 @@ export const fetchWeather = createAsyncThunk(
   'weather/fetchWeather',
   async (cord) => {
     const response = await axios.get(
-      `${apiUrl}?lat=${cord.lat}&lon=${cord.long}&appid=${apiKey}`,
+      `${apiUrl}?lat=${cord.lat}&lon=${cord.long}&appid=${apiKey}`
     );
     return response.data;
-  },
+  }
 );
-
 const weatherSlice = createSlice({
   name: 'weather',
   initialState,
@@ -33,7 +32,7 @@ const weatherSlice = createSlice({
     },
     filterCountries: (state, action) => {
       state.countries = initialState.countries.filter(
-        (country) => country.region === action.payload,
+        (country) => country.region === action.payload
       );
     },
     getWeather: (state, action) => {

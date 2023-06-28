@@ -1,34 +1,34 @@
 .heading {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background: url(../../assets/worldmap.png) no-repeat center center/cover;
-    background-color: #fd5092;
-    background-size: 100% 100%;
-    height: 30vw;
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0 5px #36454F;
-    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.342);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: url(../../assets/worldmap.png) no-repeat center center/cover;
+  background-color: #fd5092;
+  background-size: 100% 100%;
+  height: 30vw;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 5px #36454f;
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.342);
 }
 
 .heading h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .filter {
-    background-color: transparent;
-    padding: 0.2rem 1rem;
-    color: #36454F;
+  background-color: transparent;
+  padding: 0.2rem 1rem;
+  color: #36454f;
 }
 
 .filter option {
-    color: #36454F;
+  color: #36454f;
 }
 
 .filter:hover {
-    opacity: 1;
+  opacity: 1;
 }

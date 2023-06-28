@@ -9,9 +9,9 @@ import NoMatch from './pages/NotFound';
 const App = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-      <Route path="/details" element={<Details />} />
-      <Route path="/cities" element={<Cities />} />
-      <Route path="*" element={<NoMatch />} />
+    <Route path="/details" element={<Details />} />
+    <Route path="/cities" element={<Cities />} />
+    <Route path="*" element={<NoMatch />} />
   </Routes>
 );
 

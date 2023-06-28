@@ -4,7 +4,7 @@ import countries from '../data/countries';
 
 const initialState = {
   cities: [],
-  countries: countries,
+  countries,
   weather: {
     name: 'area',
     weather: [{ main: '', description: '' }],
@@ -23,7 +23,7 @@ export const fetchWeather = createAsyncThunk('weather/fetchWeather', async (cord
 
 const weatherSlice = createSlice({
   name: 'weather',
-  initialState: initialState,
+  initialState,
   reducers: {
     getCities: (state, action) => {
       state.cities = action.payload;

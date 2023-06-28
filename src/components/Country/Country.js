@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import './Country.css';
 import { getCities } from '../../redux/weatherSlice';
 
-const Country = ({ name, number, vector, cities }) => {
+const Country = ({
+  name, number, vector, cities,
+}) => {
   const mapStyle = { background: `url(${vector}) no-repeat center center/cover` };
   const dispatch = useDispatch();
 

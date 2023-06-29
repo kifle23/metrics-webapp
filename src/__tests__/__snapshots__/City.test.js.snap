@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`City component renders correctly 1`] = `
+<a
+  className="city"
+  href="/details"
+  onClick={[Function]}
+>
+  <span>
+    test
+  </span>
+</a>
+`;

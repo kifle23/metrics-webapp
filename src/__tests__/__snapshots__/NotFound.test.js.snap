@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create header Render without errors 1`] = `
+<div>
+  Page not found!
+</div>
+`;
+
+exports[`NotFound page renders without errors 1`] = `
+<div>
+  Page not found!
+</div>
+`;

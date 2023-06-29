@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`City component test Renders City 1`] = `
+exports[`City component renders correctly 1`] = `
 <a
   className="city"
   href="/details"

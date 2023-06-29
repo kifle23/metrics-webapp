@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create header Render without errors 1`] = `
+<header>
+  <h3>
+    test
+  </h3>
+  <div
+    className="icons"
+  >
+    <i
+      className="mic"
+    />
+    <i
+      className="settings"
+    />
+  </div>
+</header>
+`;
+
+exports[`Header component renders without errors 1`] = `
+<header>
+  <h3>
+    test
+  </h3>
+  <div
+    className="icons"
+  >
+    <i
+      className="mic"
+    />
+    <i
+      className="settings"
+    />
+  </div>
+</header>
+`;

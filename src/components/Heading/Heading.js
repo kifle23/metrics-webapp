@@ -27,7 +27,7 @@ const Heading = ({ title, number, home }) => {
       {home ? (
         <select className="filter" defaultValue="all" onChange={handleFilterChange}>
           <option value="all" disabled>
-            __Filter Countries by Region__
+            __Search Countries by Region__
           </option>
           {regions.map((region) => (
             <option key={region.value} value={region.value}>

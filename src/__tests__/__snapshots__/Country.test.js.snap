@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country component renders correctly 1`] = `
+<a
+  className="wrapper"
+  href="/cities"
+  onClick={[Function]}
+>
+  <i
+    className="right_arrow"
+  />
+  <div
+    className="map"
+    style={
+      Object {
+        "background": "url(null) no-repeat center center/cover",
+      }
+    }
+  />
+  <div
+    className="info"
+  >
+    <h3>
+      test
+    </h3>
+    <span>
+      5
+    </span>
+  </div>
+</a>
+`;

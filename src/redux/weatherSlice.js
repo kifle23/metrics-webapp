@@ -31,9 +31,13 @@ const weatherSlice = createSlice({
       state.cities = action.payload;
     },
     filterCountries: (state, action) => {
-      state.countries = initialState.countries.filter(
+      const filteredCountries = initialState.countries.filter(
         (country) => country.region === action.payload
       );
+      return {
+        ...state,
+        countries: filteredCountries,
+      };
     },
     getWeather: (state, action) => {
       state.weather = action.payload;

@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
-import City from '../components/City/City';
+import Heading from '../components/Heading/Heading';
 
-describe('City component', () => {
+describe('Heading component', () => {
   test('renders correctly', () => {
     const component = renderer.create(
       <Provider store={store}>
         <Router>
-          <City title="test" lat="3" long="3" />
+          <Heading title="weather" />
         </Router>
       </Provider>
     );

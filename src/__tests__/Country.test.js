@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
-import City from '../components/City/City';
+import Country from '../components/Country/Country';
 
-describe('City component', () => {
+describe('Country component', () => {
   test('renders correctly', () => {
     const component = renderer.create(
       <Provider store={store}>
         <Router>
-          <City title="test" lat="3" long="3" />
+          <Country name="test" number={5} vector={null} cities={[]} />
         </Router>
       </Provider>
     );

@@ -10,7 +10,7 @@ describe('NotFound page', () => {
     const component = renderer.create(
       <Router>
         <NotFound />
-      </Router>
+      </Router>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('NotFound page', () => {
     render(
       <Router>
         <NotFound />
-      </Router>
+      </Router>,
     );
     const notFoundElement = screen.getByText('Page not found!');
     expect(notFoundElement).toBeInTheDocument();

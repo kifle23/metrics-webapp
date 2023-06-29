@@ -12,7 +12,7 @@ describe('Country component', () => {
         <Router>
           <Country name="test" number={5} vector={null} cities={[]} />
         </Router>
-      </Provider>
+      </Provider>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

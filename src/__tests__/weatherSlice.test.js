@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-named-as-default
 import getCities from '../redux/weatherSlice';
 
 describe('Cities Reducer', () => {

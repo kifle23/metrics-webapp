@@ -12,7 +12,7 @@ describe('Heading component', () => {
         <Router>
           <Heading title="weather" />
         </Router>
-      </Provider>
+      </Provider>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

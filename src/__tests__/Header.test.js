@@ -10,7 +10,7 @@ describe('Header component', () => {
     const component = renderer.create(
       <Router>
         <Header heading="test" previous="" />
-      </Router>
+      </Router>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -20,7 +20,7 @@ describe('Header component', () => {
     render(
       <Router>
         <Header heading="test" previous="" />
-      </Router>
+      </Router>,
     );
     const headingElement = screen.getByText('test');
     expect(headingElement).toBeInTheDocument();
